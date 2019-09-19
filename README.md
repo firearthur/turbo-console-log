@@ -1,3 +1,5 @@
+# **NOTE:** I forked this extension from the following [repo](https://github.com/Chakroun-Anas/turbo-console-log) and all credits go to the respective owner
+
 ## Main Functionality
 
 ---
