@@ -1,8 +1,8 @@
 {
-  "name": "turbo-console-log",
-  "displayName": "Turbo Console Log",
+  "name": "turbo-log",
+  "displayName": "Turbo Log",
   "description": "Automating the process of writing meaningful log messages.",
-  "version": "1.2.30",
+  "version": "1.2.40",
   "publisher": "ChakrounAnas",
   "engines": {
     "vscode": "^1.19.0"
@@ -12,7 +12,10 @@
   ],
   "icon": "images/icon.png",
   "activationEvents": [
-    "onCommand:turboConsoleLog.displayLogMessage",
+    "onCommand:turboConsoleLog.displayLogMessage1",
+    "onCommand:turboConsoleLog.displayLogMessage2",
+    "onCommand:turboConsoleLog.displayLogMessage3",
+    "onCommand:turboConsoleLog.displayLogMessage4",
     "onCommand:turboConsoleLog.commentAllLogMessages",
     "onCommand:turboConsoleLog.uncommentAllLogMessages",
     "onCommand:turboConsoleLog.deleteAllLogMessages"
@@ -72,7 +75,19 @@
     },
     "commands": [
       {
-        "command": "turboConsoleLog.displayLogMessage",
+        "command": "turboConsoleLog.displayLogMessage1",
+        "title": "Turbo Console Log: Display Log Message"
+      },
+      {
+        "command": "turboConsoleLog.displayLogMessage2",
+        "title": "Turbo Console Log: Display Log Message"
+      },
+      {
+        "command": "turboConsoleLog.displayLogMessage3",
+        "title": "Turbo Console Log: Display Log Message"
+      },
+      {
+        "command": "turboConsoleLog.displayLogMessage4",
         "title": "Turbo Console Log: Display Log Message"
       },
       {
@@ -90,9 +105,24 @@
     ],
     "keybindings": [
       {
-        "command": "turboConsoleLog.displayLogMessage",
-        "key": "ctrl+alt+l",
-        "mac": "ctrl+alt+l"
+        "command": "turboConsoleLog.displayLogMessage1",
+        "key": "ctrl+alt+1",
+        "mac": "ctrl+alt+1"
+      },
+      {
+        "command": "turboConsoleLog.displayLogMessage2",
+        "key": "ctrl+alt+2",
+        "mac": "ctrl+alt+2"
+      },
+      {
+        "command": "turboConsoleLog.displayLogMessage3",
+        "key": "ctrl+alt+3",
+        "mac": "ctrl+alt+3"
+      },
+      {
+        "command": "turboConsoleLog.displayLogMessage4",
+        "key": "ctrl+alt+4",
+        "mac": "ctrl+alt+4"
       },
       {
         "command": "turboConsoleLog.commentAllLogMessages",

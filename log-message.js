@@ -1,4 +1,3 @@
-const vscode = require("vscode");
 const lineCodeProcessing = require("./line-code-processing");
 
 /**
