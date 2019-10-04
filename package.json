@@ -2,7 +2,7 @@
   "name": "turbo-log",
   "displayName": "Turbo Log",
   "description": "Automating the process of writing meaningful log messages.",
-  "version": "1.2.40",
+  "version": "1.2.41",
   "publisher": "ChakrounAnas",
   "engines": {
     "vscode": "^1.19.0"
@@ -41,6 +41,11 @@
           "default": false,
           "description": "Determine if the log message should be wrapped or not."
         },
+        "turboConsoleLog.noSelectionLog": {
+          "type": "string",
+          "default": "something",
+          "description": "What to log if nothing is selected."
+        },
         "turboConsoleLog.logMessagePrefix": {
           "type": "string",
           "default": "TCL",
@@ -76,19 +81,19 @@
     "commands": [
       {
         "command": "turboConsoleLog.displayLogMessage1",
-        "title": "Turbo Console Log: Display Log Message"
+        "title": "Turbo Console Log: Display Log Message Severity 1"
       },
       {
         "command": "turboConsoleLog.displayLogMessage2",
-        "title": "Turbo Console Log: Display Log Message"
+        "title": "Turbo Console Log: Display Log Message Severity 2"
       },
       {
         "command": "turboConsoleLog.displayLogMessage3",
-        "title": "Turbo Console Log: Display Log Message"
+        "title": "Turbo Console Log: Display Log Message Severity 3"
       },
       {
         "command": "turboConsoleLog.displayLogMessage4",
-        "title": "Turbo Console Log: Display Log Message"
+        "title": "Turbo Console Log: Display Log Message Severity 4"
       },
       {
         "command": "turboConsoleLog.commentAllLogMessages",

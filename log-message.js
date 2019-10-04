@@ -14,6 +14,7 @@ const lineCodeProcessing = require("./line-code-processing");
  * @param {string} quote
  * @param {boolean} addSemicolonInTheEnd
  * @param {number} tabSize
+ * @param {string} noSelectionLog
  * @return {string}
  * @author Chakroun Anas <chakroun.anas@outlook.com>
  * @since 1.0
@@ -30,7 +31,8 @@ function message(
   addSemicolonInTheEnd,
   insertEnclosingClass,
   insertEnclosingFunction,
-  tabSize
+  tabSize,
+  noSelectionLog
 ) {
   const classThatEncloseTheVar = enclosingBlockName(
     document,
@@ -47,11 +49,11 @@ function message(
   const semicolon = addSemicolonInTheEnd ? ";" : "";
   const debuggingMsg = `${logCode}(${quote}${logMessagePrefix}: ${
     insertEnclosingClass ? classThatEncloseTheVar : ""
-  }${
-    insertEnclosingFunction ? funcThatEncloseTheVar : ""
-  }${selectedVar}: ${quote}${
-    concatSelection ? " +" : ","
-  } ${selectedVar})${semicolon}`;
+  }${insertEnclosingFunction ? funcThatEncloseTheVar : ""}${
+    selectedVar ? selectedVar : noSelectionLog
+  }: ${quote}${selectedVar ? (concatSelection ? " +" : ",") : ""} ${
+    selectedVar ? selectedVar : ""
+  })${semicolon}`;
   if (wrapLogMessage) {
     // 5 represents the length of ("") which comes after the logCode;
     const wrappingMsg = `${logCode}(${quote}${logMessagePrefix}: ${"-".repeat(
